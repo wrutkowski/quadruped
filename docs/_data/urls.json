@@ -1,0 +1,24 @@
+[
+  {
+    "text": "Home",
+    "url": "/",
+    "icon": "fa-home",
+    "layout": "post"
+  },
+  {
+    "text": "Simulator",
+    "url": "#",
+    "icon": "fa-rocket"
+  },
+  {
+    "text": "Github",
+    "url": "https://github.com/wrutkowski/quadruped",
+    "icon": "fa-github"
+  },
+  {
+    "text": "XML Feed",
+    "url": "/feed.xml",
+    "icon": "fa-feed",
+    "target": _blank
+  }
+]
