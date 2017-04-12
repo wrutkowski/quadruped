@@ -6,9 +6,9 @@ date:   2017-04-11 22:00:00
 I received OLED display as a first parcel, so I decided to give it a go.
 I tested couple of libraries and I managed to run u8g2 and SH1103_SPI. The memory footprint is very high for both as just with test program it sets global variable at 51%.
 
-![Picture of the OLED Display](quadruped/assets/display-oled.jpg)
+![Picture of the OLED Display](/quadruped/assets/display-oled.jpg)
 
-![Arduino memory stats for demo](quadruped/assets/display-arduino-sketch-memory-stats)
+![Arduino memory stats for demo](/quadruped/assets/display-arduino-sketch-memory-stats)
 
 I was thinking how to display emotions: should it be eyes only, eyes and mouth, what about some artefacts like a bulb 💡 for an idea, heart ❤️ for love?
 For all of those I don't need graphics library as I can export frames directly.
@@ -19,7 +19,7 @@ According to Paul Ekman there are six distinct emotions: anger 😠, disgust �
 
 I created small app based on JS p5 (the same as for Inverse Kinematics). It has a 128x64 squares, which can be turned on or off by mouse press or dragging. There is also a save button that exports the whole frame into an array of 0 and 1 - representing each pixel on the display.
 
-![p5 display frame app](quadruped/assets/display-p5-editor.png)
+![p5 display frame app](/quadruped/assets/display-p5-editor.png)
 
 It didn't work ☹️ The amount of data produced by this method was too big to be handled by global variable. The program wouldn't compile. I thought that maybe providing only coordinates of pixels that are on and making it part of the program, not variable will help. And it did. Exported frame could be copy-pasted into Arduino IDE and run directly on the display - all working just fine.
 
@@ -31,8 +31,8 @@ Few improvements later it was working perfectly. I've added a segmentation: a ch
 
 For designing the expressions I used Sketch as it's my almost-every-day work tool. Easy shape creation, vector graphics, automatic export 👌
 
-![Designed face expressions](quadruped/assets/emotions.png)
+![Designed face expressions](/quadruped/assets/emotions.png)
 
 Running everything together on the display
 
-![GIF showing display with face expressions](quadruped/assets/display-working-face-expressions.gif)
+![GIF showing display with face expressions](/quadruped/assets/display-working-face-expressions.gif)
