@@ -9,4 +9,6 @@ By body language I mean waving with one of the legs, shaking, dancing. For a fac
 
 I was thinking about material and as I don't have 3D printer nor workshop I decided to use something simple. For now I'm experimenting with *balsa wood* 5mm and 6.8mm thick. When servo motors will arrive I'll test rigidity of balsa wood and in case it won't work I have plastic sheet as a backup plan.
 
+![Balsa wood leg](/quadruped/assets/idea-balsa-wood-leg.jpg)
+
 I ordered parts from China so it'll take a while for them to arrive. In the meantime I cut one leg and a body from balsa having only one servo motor for sizing and testing. I can start writing some code though! I'm going to make robot simulator to work out inverse kinematics and easily test movements of the robot: walking, turning and so on.
