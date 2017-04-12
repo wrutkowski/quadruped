@@ -8,7 +8,7 @@ I tested couple of libraries and I managed to run u8g2 and SH1103_SPI. The memor
 
 ![Picture of the OLED Display](/quadruped/assets/display-oled.jpg)
 
-![Arduino memory stats for demo](/quadruped/assets/display-arduino-sketch-memory-stats)
+![Arduino memory stats for demo](/quadruped/assets/display-arduino-sketch-memory-stats.png)
 
 I was thinking how to display emotions: should it be eyes only, eyes and mouth, what about some artefacts like a bulb 💡 for an idea, heart ❤️ for love?
 For all of those I don't need graphics library as I can export frames directly.
