@@ -26,8 +26,8 @@ The next step involved coding Inverse Kinematics. I based the calculation on the
 
 ![3DOF Inverse Kinematics For Arm/Leg of Robot Using Arduino](http://i2.wp.com/te.unib.ac.id/lecturer/indraagustian/wp-content/uploads/2014/05/Inverse-Kinematics.jpg)
 
-The animation I added first was just **standing** - it's more a pose than animation, but I had to start somewhere 🙃 Second one, but just changing Z value was **sitting**. Next on the list: **waving** is a standing position with one leg up and moving in hip joint back and forth.
-Walking and turning were more difficult so I'll describe them in the separate post.
+The animation I added first was just **standing** - it's more a pose than animation, but I had to start somewhere 🙃 Second one, by just changing Z value was **sitting**. Next on the list: **waving** is a standing position with one leg up and moving in hip joint back and forth.
+Walking and turning were more difficult so I'll describe them in a separate post.
 
 Finally I've added some additional features like preset views, changing the animation speed, showing and hiding axles and _ground_ plane.
 
