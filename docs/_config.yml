@@ -5,7 +5,7 @@ logo: /quadruped/static/img/quadruped.png
 github: https://github.com/wrutkowski
 about: Robot enthusiast
 
-baseurl: ""
+baseurl: "/quadruped"
 url: "https://wrutkowski.github.io/quadruped"
 
 share:
