@@ -23,4 +23,8 @@ For an experiment I used ultrasonic sensor to make the robot happy when detectin
 
 ![RFID, Ultrasonic sensor controlling emotions on an OLED Display](/quadruped/assets/rfid-ultrasonic-oled.gif)
 
+I'm happy with memory footprint so far as with those three libraries it's at 50% program and 63% dynamic memory on Arduino Nano.
+
+![RFID, Ultrasonic and OLED libraries mamory footprint](/quadruped/assets/rfid-ultrasonic-oled-memory-stats.png)
+
 Code from this post and previous posts is available  [here](https://github.com/wrutkowski/quadruped/blob/c01af33010721998d79208610dbcb35690a00a36/arduino/rfid-ultrasonic-controlled-oled/rfid-ultrasonic-controlled-oled.ino).
