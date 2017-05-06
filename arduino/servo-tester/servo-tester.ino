@@ -6,9 +6,9 @@
 
 const int buttonPin = 3;
 const int analogInPin = A2;
-const int hipServoPin = 8;
-const int thighServoPin = 9;
-const int tibiaServoPin = 10;
+const int hipServoPin = 5;
+const int thighServoPin = 6;
+const int tibiaServoPin = 7;
 
 Servo hipServo;
 Servo thighServo;
