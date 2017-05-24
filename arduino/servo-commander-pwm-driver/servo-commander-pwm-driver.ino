@@ -1,34 +1,35 @@
 #include <Wire.h>
 #include <Adafruit_PWMServoDriver.h>
 
-#define leg1hipServoNumber     5
-#define leg1thighServoNumber   4
-#define leg1tibiaServoNumber   3
-#define leg2hipServoNumber     6
-#define leg2thighServoNumber   7
-#define leg2tibiaServoNumber   8
-#define leg3hipServoNumber     9
-#define leg3thighServoNumber   10
-#define leg3tibiaServoNumber   11
-#define leg4hipServoNumber     0
-#define leg4thighServoNumber   1
-#define leg4tibiaServoNumber   2
+#define leg1hipServoNumber     0
+#define leg1thighServoNumber   1
+#define leg1tibiaServoNumber   2
+#define leg2hipServoNumber     4
+#define leg2thighServoNumber   5
+#define leg2tibiaServoNumber   6
+#define leg3hipServoNumber     8
+#define leg3thighServoNumber   9
+#define leg3tibiaServoNumber   10
+#define leg4hipServoNumber     12
+#define leg4thighServoNumber   13
+#define leg4tibiaServoNumber   14
 
 Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();
 
 // service pose
-uint16_t leg1hipServoSetValue = 550;
-uint16_t leg1thighServoSetValue = 550;
-uint16_t leg1tibiaServoSetValue = 450;
-uint16_t leg2hipServoSetValue = 225;
+// 1,1,305,1,2,500,1,3,222,2,1,416,2,2,185,2,3,508,3,1,344,3,2,544,3,3,168,4,1,378,4,2,188,4,3,531
+uint16_t leg1hipServoSetValue = 300;
+uint16_t leg1thighServoSetValue = 500;
+uint16_t leg1tibiaServoSetValue = 220;
+uint16_t leg2hipServoSetValue = 425;
 uint16_t leg2thighServoSetValue = 200;
-uint16_t leg2tibiaServoSetValue = 300;
-uint16_t leg3hipServoSetValue = 550;
+uint16_t leg2tibiaServoSetValue = 500;
+uint16_t leg3hipServoSetValue = 350;
 uint16_t leg3thighServoSetValue = 550;
-uint16_t leg3tibiaServoSetValue = 450;
-uint16_t leg4hipServoSetValue = 225;
-uint16_t leg4thighServoSetValue = 250;
-uint16_t leg4tibiaServoSetValue = 300;
+uint16_t leg3tibiaServoSetValue = 170;
+uint16_t leg4hipServoSetValue = 380;
+uint16_t leg4thighServoSetValue = 200;
+uint16_t leg4tibiaServoSetValue = 530;
 
 // stand pose
 //uint16_t leg1hipServoSetValue = 550;

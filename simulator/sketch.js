@@ -61,7 +61,7 @@ var setLeg4z = leg4z;
 
 var robotAnimation = 'none';
 var speed = 5;
-var animation = ['none', 'walk forward', 'stand', 'sit', 'dead', 'wave'];
+var animation = ['none', 'walk forward', 'walk forward 2', 'stand', 'sit', 'dead', 'wave'];
 var animationTimer;
 
 function computeXYZToAngles(x, y, z) {
@@ -78,7 +78,7 @@ function computeXYZToAngles(x, y, z) {
 	if (isNaN(alpha) || isNaN(beta) || isNaN(theta)) {
 		// console.log("Warning! Position not reachable.");
 		return undefined
-	} else {	
+	} else {
 		alpha = degrees(alpha);
 		beta = degrees(beta) - 90;
 		theta = degrees(theta) - 180;
@@ -137,7 +137,7 @@ function wave(step) {
 	// console.log("walk forward: " + step);
 	if (step == 0) {
 		stand();
-		
+
 		animationTimer = setTimeout(function(){ wave(1); }, stepTime);
 	} else if (step == 1) {
 		setLeg(1, -0.2, 0.4, 0.6);
@@ -164,11 +164,11 @@ function walkForward(step) {
 		setLeg(2, 0.5, movementMax - 2 * movementStep, -0.25);
 		setLeg(3, 0.5, movementMin + 3 * movementStep, -0.25);
 		setLeg(4, 0.5, movementMin + 1 * movementStep, -0.25);
-		
+
 		animationTimer = setTimeout(function(){ walkForward(++step); }, stepTime);
 	} else if (step == 1) {
 		setLeg(1, 0.5, movementMax - 4 * movementStep, 0); // up
-		
+
 		animationTimer = setTimeout(function(){ walkForward(++step); }, stepTime);
 	} else if (step == 2) {
 		setLeg(1, 0.5, movementMax - 0 * movementStep, 0); // move forward
@@ -188,7 +188,7 @@ function walkForward(step) {
 		animationTimer = setTimeout(function(){ walkForward(++step); }, stepTime);
 	} else if (step == 5) {
 		setLeg(3, 0.5, movementMin + 4 * movementStep, 0); // up
-		
+
 		animationTimer = setTimeout(function(){ walkForward(++step); }, stepTime);
 	} else if (step == 6) {
 		setLeg(3, 0.5, movementMin + 0 * movementStep, 0); // move forward
@@ -208,7 +208,7 @@ function walkForward(step) {
 		animationTimer = setTimeout(function(){ walkForward(++step); }, stepTime);
 	} else if (step == 9) {
 		setLeg(2, 0.5, movementMax - 4 * movementStep, 0); // up
-		
+
 		animationTimer = setTimeout(function(){ walkForward(++step); }, stepTime);
 	} else if (step == 10) {
 		setLeg(2, 0.5, movementMax - 0 * movementStep, 0); // move forward
@@ -228,7 +228,7 @@ function walkForward(step) {
 		animationTimer = setTimeout(function(){ walkForward(++step); }, stepTime);
 	} else if (step == 13) {
 		setLeg(4, 0.5, movementMin + 4 * movementStep, 0); // up
-		
+
 		animationTimer = setTimeout(function(){ walkForward(++step); }, stepTime);
 	} else if (step == 14) {
 		setLeg(4, 0.5, movementMin + 0 * movementStep, 0); // move forward
@@ -246,6 +246,89 @@ function walkForward(step) {
 		setLeg(4, 0.5, movementMin + 1 * movementStep, -0.25);
 
 		animationTimer = setTimeout(function(){ walkForward(1); }, stepTime);
+	}
+}
+
+function walkForward2(step) {
+	var stepTime = 1700 / speed;
+	var step = step || 0;
+	// console.log("walk forward: " + step);
+
+	var movementMin = -0.1;
+	var movementMax = 0.6;
+	var movementStep = 0.35;
+
+	if (step == 0) {
+		setLeg(1, 0.5, movementMax - 2 * movementStep, -0.25);
+		setLeg(2, 0.5, movementMax - 1 * movementStep, -0.25);
+		setLeg(3, 0.5, movementMax - 1 * movementStep, -0.25);
+		setLeg(4, 0.5, movementMax - 0 * movementStep, -0.25);
+
+		animationTimer = setTimeout(function(){ walkForward2(++step); }, stepTime);
+	} else if (step == 1) {
+		setLeg(4, 0.5, movementMax - 0 * movementStep, 0); // up
+
+		animationTimer = setTimeout(function(){ walkForward2(++step); }, stepTime);
+	} else if (step == 2) {
+		setLeg(4, 0.5, movementMax - 2 * movementStep, 0); // move forward
+
+		animationTimer = setTimeout(function(){ walkForward2(++step); }, stepTime);
+	} else if (step == 3) {
+		setLeg(4, 0.5, movementMax - 2 * movementStep, -0.25); // down
+
+		animationTimer = setTimeout(function(){ walkForward2(++step); }, stepTime);
+	} else if (step == 4) {
+		setLeg(1, 0.5, movementMax - 2 * movementStep, 0); // up
+
+		animationTimer = setTimeout(function(){ walkForward2(++step); }, stepTime);
+	} else if (step == 5) {
+		setLeg(1, 0.5, movementMax - 0 * movementStep, 0); // move forward
+
+		animationTimer = setTimeout(function(){ walkForward2(++step); }, stepTime);
+	} else if (step == 6) {
+		setLeg(1, 0.5, movementMax - 0 * movementStep, -0.25); // down
+
+		animationTimer = setTimeout(function(){ walkForward2(++step); }, stepTime);
+	} else if (step == 7) {
+		// move body
+		setLeg(1, 0.5, movementMax - 1 * movementStep, -0.25);
+		setLeg(2, 0.5, movementMax - 2 * movementStep, -0.25);
+		setLeg(3, 0.5, movementMax - 0 * movementStep, -0.25);
+		setLeg(4, 0.5, movementMax - 1 * movementStep, -0.25);
+
+		animationTimer = setTimeout(function(){ walkForward2(++step); }, stepTime);
+	} else if (step == 8) {
+		setLeg(3, 0.5, movementMax - 0 * movementStep, 0); // up
+
+		animationTimer = setTimeout(function(){ walkForward2(++step); }, stepTime);
+	} else if (step == 9) {
+		setLeg(3, 0.5, movementMax - 2 * movementStep, 0); // move forward
+
+		animationTimer = setTimeout(function(){ walkForward2(++step); }, stepTime);
+	} else if (step == 10) {
+		setLeg(3, 0.5, movementMax - 2 * movementStep, -0.25); // down
+
+		animationTimer = setTimeout(function(){ walkForward2(++step); }, stepTime);
+	} else if (step == 11) {
+		setLeg(2, 0.5, movementMax - 2 * movementStep, 0); // up
+
+		animationTimer = setTimeout(function(){ walkForward2(++step); }, stepTime);
+	} else if (step == 12) {
+		setLeg(2, 0.5, movementMax - 0 * movementStep, 0); // move forward
+
+		animationTimer = setTimeout(function(){ walkForward2(++step); }, stepTime);
+	} else if (step == 13) {
+		setLeg(2, 0.5, movementMax - 0 * movementStep, -0.25); // down
+
+		animationTimer = setTimeout(function(){ walkForward2(++step); }, stepTime);
+	} else if (step == 14) {
+		// move body
+		setLeg(1, 0.5, movementMax - 2 * movementStep, -0.25);
+		setLeg(2, 0.5, movementMax - 1 * movementStep, -0.25);
+		setLeg(3, 0.5, movementMax - 1 * movementStep, -0.25);
+		setLeg(4, 0.5, movementMax - 0 * movementStep, -0.25);
+
+		animationTimer = setTimeout(function(){ walkForward2(1); }, stepTime);
 	}
 }
 
@@ -342,29 +425,29 @@ function setup() {
 	gui.prototype.addHTML("QUADRUPED", "Inverse Kinematics implemented on 3DOF quadruped");
 	gui.prototype.addHTML("Instructions", "mouse drag - pivot<br>x + scroll - move along X axis<br>y + scroll - move along Y axis<br>z + scroll - move along Z axis<br>Double click to collapse panels");
 	gui.prototype.addHTML("World Camera", "");
-	
+
 	var guiView = createGui('View', 20, 20 + 255 + 20);
 	guiView.addGlobals('showPlane');
 	guiView.addGlobals('showAxes');
 	guiView.prototype.addButton("TOP", function(){
-		worldRotateX = 0; 
-		worldRotateY = 0; 
+		worldRotateX = 0;
+		worldRotateY = 0;
 		worldRotateZ = 0;
 		worldCameraX = 0;
 		worldCameraY = 0;
 		worldCameraZ = 0;
 	});
 	guiView.prototype.addButton("FRONT", function(){
-		worldRotateX = 270; 
-		worldRotateY = 0; 
+		worldRotateX = 270;
+		worldRotateY = 0;
 		worldRotateZ = 180;
 		worldCameraX = 0;
 		worldCameraY = 0;
 		worldCameraZ = 0;
 	});
 	guiView.prototype.addButton("PERSPECTIVE", function(){
-		worldRotateX = -60; 
-		worldRotateY = 5; 
+		worldRotateX = -60;
+		worldRotateY = 5;
 		worldRotateZ = -145;
 		worldCameraX = 0;
 		worldCameraY = 0;
@@ -435,6 +518,8 @@ function draw() {
 			dead();
 		} else if (robotAnimation == "walk forward") {
 			walkForward();
+		} else if (robotAnimation == "walk forward 2") {
+			walkForward2();
 		}
 	}
 
